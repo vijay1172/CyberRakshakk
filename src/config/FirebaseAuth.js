@@ -23,6 +23,7 @@ export const doSignOut = () => {
 export const doPasswordReset = (email) => {
     return sendPasswordResetEmail(auth, email);
 };
+//for password change
 
 export const doPasswordChange = (password) => {
     return updatePassword(auth.currentUser, password);
