@@ -1,0 +1,76 @@
+{
+    "quizTitle": "CyberSecurity Quiz",
+    "quizSynopsis": "Test your knowledge of cybersecurity concepts and practices",
+    "questions": [
+      {
+        "question": "What is a firewall?",
+        "questionType": "text",
+        "answers": [
+          "A security system that monitors and controls network traffic",
+          "A type of computer virus",
+          "A physical barrier for servers",
+          "A backup storage device"
+        ],
+        "correctAnswer": "1",
+        "messageForCorrectAnswer": "Correct! A firewall is a security system that monitors and controls network traffic.",
+        "messageForInorrectAnswer": "Incorrect. A firewall is a security system that monitors and controls network traffic.",
+        "point": "1"
+      },
+      {
+        "question": "What does 'phishing' refer to in cybersecurity?",
+        "questionType": "text",
+        "answers": [
+          "A type of encryption",
+          "A method of backing up data",
+          "A fraudulent attempt to obtain sensitive information",
+          "A network monitoring tool"
+        ],
+        "correctAnswer": "3",
+        "messageForCorrectAnswer": "Correct! Phishing is a fraudulent attempt to obtain sensitive information.",
+        "messageForInorrectAnswer": "Incorrect. Phishing is a fraudulent attempt to obtain sensitive information.",
+        "point": "1"
+      },
+      {
+        "question": "What is two-factor authentication (2FA)?",
+        "questionType": "text",
+        "answers": [
+          "A method of encrypting data twice",
+          "A security process requiring two different authentication factors",
+          "A type of firewall",
+          "A technique for creating strong passwords"
+        ],
+        "correctAnswer": "2",
+        "messageForCorrectAnswer": "Correct! 2FA is a security process requiring two different authentication factors.",
+        "messageForInorrectAnswer": "Incorrect. 2FA is a security process requiring two different authentication factors.",
+        "point": "1"
+      },
+      {
+        "question": "What is malware?",
+        "questionType": "text",
+        "answers": [
+          "Software designed to disrupt, damage, or gain unauthorized access",
+          "A type of antivirus program",
+          "A secure messaging system",
+          "A method of data encryption"
+        ],
+        "correctAnswer": "1",
+        "messageForCorrectAnswer": "Correct! Malware is software designed to disrupt, damage, or gain unauthorized access.",
+        "messageForInorrectAnswer": "Incorrect. Malware is software designed to disrupt, damage, or gain unauthorized access.",
+        "point": "1"
+      },
+      {
+        "question": "What does VPN stand for?",
+        "questionType": "text",
+        "answers": [
+          "Very Private Network",
+          "Virtual Personal Network",
+          "Virtual Private Network",
+          "Verified Public Network"
+        ],
+        "correctAnswer": "3",
+        "messageForCorrectAnswer": "Correct! VPN stands for Virtual Private Network.",
+        "messageForInorrectAnswer": "Incorrect. VPN stands for Virtual Private Network.",
+        "point": "1"
+      }
+    ]
+  }
