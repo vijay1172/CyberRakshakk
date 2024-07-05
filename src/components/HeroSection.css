@@ -6,6 +6,7 @@
     width: 100vw;
     background-image: url(../assets/herobg1.jpg);
     background-repeat: no-repeat;
+
     background-size: cover;  
     background-position: center; 
     display: flex;
