@@ -1,22 +1,23 @@
 import React from 'react';
-
-// this is just for testing purpose
+import './Login.css';
 
 function Login() {
   return (
-    <div>
-      <h2>Login Page</h2>
-      <form>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="username" name="username" />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+    <div className="login-container">
+      <div className="login-form">
+        <h2>Login Page</h2>
+        <form>
+          <div className="form-group">
+            <label htmlFor="username">Username:</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 }

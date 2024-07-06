@@ -1,19 +1,17 @@
 import React from 'react';
 import HeroSection from './HeroSection';
-import QuizSection from './QuizSection';
-import ArticlesSection from './ArticlesSection';
-import SafetyTipsSection from './SafetyTipsSection';
-import ResourcesSection from './ResourcesSection';
+import QuizApp from './Quiz';
+import ArticlesSection from './Articles';
+// Import other sections as needed
 
 function MainPage() {
   return (
-    <div className="main-page">
-      <HeroSection />
-      <QuizSection />
-      <ArticlesSection />
-      <SafetyTipsSection />
-      <ResourcesSection />
-    </div>
+    <main>
+      <div id="hero"><HeroSection /></div>
+      <div id="quiz"><QuizApp /></div>
+      <div id="articles"><ArticlesSection /></div>
+      {/* Add components for other sections */}
+    </main>
   );
 }
 
