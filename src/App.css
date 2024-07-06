@@ -12,15 +12,17 @@
   align-items: center;
   padding: 2rem;
 } */
-
-
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .quiz-section {
   background-color: #e0e0e0;
 }
 
 .articles-section {
-  background-color: #4499fa;
+  background-color: #7ba9de;
 }
 
 .safety-tips-section {
