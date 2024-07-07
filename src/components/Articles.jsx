@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Articles.css';
 import phishingimage from '../assets/phishing.jpeg';
 import strongpassword from '../assets/strong password.jpeg';
 import cyber from '../assets/cyber.jpeg';
+import twofactor from '../assets/twofactor1.jpg'
+
 
 const articles = [
   {
@@ -19,44 +21,68 @@ const articles = [
     title: "Cybersecurity Best Practices for Remote Work",
     image: cyber,
     content: "With the rise of remote work, cybersecurity has become more important than ever..."
+  },
+  {
+    title: "2 Factor Authentication",
+    image: twofactor,
+    content: "Two-factor authentication (2FA) is an identity and access management security method that requires two forms of identification to access resources and data. 2FA gives businesses the ability to monitor and help safeguard their most vulnerable information and networks."
   }
 ];
 
 function ArticlesSection() {
   const [startIndex, setStartIndex] = useState(0);
+  const [expandedCard, setExpandedCard] = useState(null);
+  const carouselRef = useRef(null);
 
   const nextSlide = () => {
-    setStartIndex((prevIndex) => 
-      (prevIndex + 1) % articles.length
-    );
+    setStartIndex((prevIndex) => (prevIndex + 1) % articles.length);
+    setExpandedCard(null);
   };
 
   const prevSlide = () => {
-    setStartIndex((prevIndex) => 
-      (prevIndex - 1 + articles.length) % articles.length
-    );
+    setStartIndex((prevIndex) => (prevIndex - 1 + articles.length) % articles.length);
+    setExpandedCard(null);
   };
 
+  const toggleCard = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }, [startIndex]);
   return (
     <section className="articles-section" id="articles">
-      <h2>Latest Articles</h2>
+      <h2>Basic Terminology</h2>
       <div className="carousel">
-        <button className="carousel-button prev" onClick={prevSlide}>&lt;</button>
+        <button className="carousel-button-prev" onClick={prevSlide}>&lt;</button>
         <div className="card-container">
           {[0, 1, 2].map((offset) => {
             const index = (startIndex + offset) % articles.length;
+            const isExpanded = expandedCard === index;
             return (
-              <div className="card" key={index}>
+              <div 
+                className={`card ${isExpanded ? 'expanded' : ''}`} 
+                key={index}
+                onClick={() => toggleCard(index)}
+              >
                 <img src={articles[index].image} alt={articles[index].title} />
                 <div className="card-content">
                   <h3>{articles[index].title}</h3>
-                  <p>{articles[index].content}</p>
+                  <p className={isExpanded ? 'expanded' : ''}>
+                    {articles[index].content}
+                  </p>
                 </div>
               </div>
             );
           })}
         </div>
-        <button className="carousel-button next" onClick={nextSlide}>&gt;</button>
+        <button className="carousel-button-next" onClick={nextSlide}>&gt;</button>
       </div>
     </section>
   );

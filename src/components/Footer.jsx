@@ -15,8 +15,6 @@ function Footer() {
             <li><a href="#hero">Home</a></li>
             <li><a href="#quiz">Quiz</a></li>
             <li><a href="#articles">Articles</a></li>
-            {/* <li><a href="#safety-tips">Safety Tips</a></li>
-            <li><a href="#resources">Resources</a></li> */}
           </ul>
         </div>
         <div className="footer-section contact">
@@ -26,7 +24,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 Your Company | All Rights Reserved
+        &copy; 2024 CyberRakshak | All Rights Reserved
       </div>
     </footer>
   );
