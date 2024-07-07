@@ -1,14 +1,15 @@
-.header-container{
+/* .navigation-bar{
+    margin: 0;
     display: flex;
     justify-content: left;
     gap: 10px;
     flex-direction: row;
     padding-left: 10vh;
-    height: 40px;
+    height: 80px;
     align-items: center;
-    background-color: #383a3f;
+     background-color: #383a3f; 
     position: fixed;
-    width: 100%;
+    width: 100%; 
   
 }
 
@@ -25,9 +26,13 @@ ul{
     border-radius: 5px;
     font-size: 16px;
     text-decoration: none; /* Ensure it looks like a button */
-    display: inline-block; /* Ensure it looks like a button */
-  }
+   /* display: inline-block; /* Ensure it looks like a button */
+  /* }
   
   .login-button:hover {
     background-color: #0056b3;
   }
+  header{
+    margin: 0;
+    padding: 0; */
+  /* }  */

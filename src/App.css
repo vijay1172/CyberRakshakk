@@ -12,23 +12,20 @@
   align-items: center;
   padding: 2rem;
 } */
-*{
-  margin: 0;
-  padding: 0;
-}
+
 
 .quiz-section {
-  background-color: #e0e0e0;
+  /* background-color: #e0e0e0; */
 }
 
 .articles-section {
-  background-color: #7ba9de;
+  /* background-color: #7ba9de; */
 }
 
 .safety-tips-section {
-  background-color: #c0c0c0;
+  /* background-color: #c0c0c0; */
 }
 
 .resources-section {
-  background-color: #b0b0b0;
+  /* background-color: #b0b0b0; */
 }

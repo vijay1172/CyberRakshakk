@@ -5,7 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  background: rgb(47,90,87);
+  background: linear-gradient(90deg, rgba(47,90,87,1) 23%, rgba(10,13,48,1) 79%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,7 +35,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3rem;
   line-height: 1.1;
 }
 
