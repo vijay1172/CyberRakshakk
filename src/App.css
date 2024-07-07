@@ -1,25 +1,10 @@
-/* .main-page {
-  width: 100%;
-  overflow-y: auto;
-} */
 
-/* section {
-  min-height: 100vh; 
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-} */
+
 *{
   margin: 0;
   padding: 0;
 }
 
-/* .quiz-section {
-  background-color: #e0e0e0;
-} */
 
 .articles-section {
   background-color: #01021A;
