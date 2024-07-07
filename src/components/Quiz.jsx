@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Quiz from 'react-quiz-component';
-import '../components/Quiz.css';  
+import '../components/Quiz.css';
 
-function QuizApp() {
+function QuizSection() {
   const [quizData, setQuizData] = useState(null);
   const [score, setScore] = useState(0);
   const [error, setError] = useState(null);
+  const [showQuiz, setShowQuiz] = useState(false);
 
   useEffect(() => {
     console.log('Fetching questions...');
@@ -27,32 +28,55 @@ function QuizApp() {
   }, []);
 
   const handleQuizFinish = (obj) => {
+    console.log('Quiz finished:', obj);
     setScore(obj.correctPoints);
   };
 
-  if (error) {
-    return <div className="error-message">Error loading quiz: {error}</div>;
-  }
-
-  if (!quizData) {
-    return <div className="loading-message">Loading quiz...</div>;
-  }
+  const startQuiz = () => {
+    setShowQuiz(true);
+  };
 
   return (
-    <div className="quiz-container">
-      <div className="light"></div>
-      <div className="quiz-content">
-        <h1>{quizData.quizTitle}</h1>
-        <p>{quizData.quizSynopsis}</p>
-        <Quiz 
-          quiz={quizData}
-          showDefaultResult={false}
-          onComplete={handleQuizFinish}
-        />
-        <div className="score">Current Score: {score}</div>
-      </div>
+<div className="quiz-section">
+    {!showQuiz ? (
+      <>
+        <div className="cybersecurity-intro">
+          <h2 style={{color: "white"}}>Cybersecurity: Safeguarding Our Digital World</h2>
+          <p>
+            Are you ready to test your knowledge on cybersecurity?
+            Click the button below to start a quiz and see how much you know about protecting yourself and others in the digital realm!
+          </p>
+          <button className="start-quiz-btn" onClick={startQuiz}>Test myself</button>
+        </div>
+        <div className='parent-container'>
+         
+          <img className='quizimg' src="./src/assets/quizmain.png" alt="img" />
+        </div>
+      </>
+      ) : (
+        <div className="quiz-container">
+          <div className="light"></div>
+          <div className="quiz-content">
+            {error && <div className="error-message">Error loading quiz: {error}</div>}
+            {!quizData && <div className="loading-message">Loading quiz...</div>}
+            {quizData && (
+              <>
+                <h1>{quizData.quizTitle}</h1>
+                <p>{quizData.quizSynopsis}</p>
+                <Quiz
+                  quiz={quizData}
+                  shuffle={true}
+                  showDefaultResult={false}
+                  onComplete={handleQuizFinish}
+                />
+                <div className="score">Current Score: {score}</div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-export default QuizApp;
+export default QuizSection;

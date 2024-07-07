@@ -1,31 +1,22 @@
-/* .main-page {
-  width: 100%;
-  overflow-y: auto;
-} */
-
-/* section {
-  min-height: 100vh; 
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-} */
 
 
-.quiz-section {
-  /* background-color: #e0e0e0; */
+*{
+  margin: 0;
+  padding: 0;
 }
 
+
 .articles-section {
-  /* background-color: #7ba9de; */
+  background-color: #01021A;
 }
 
 .safety-tips-section {
-  /* background-color: #c0c0c0; */
+  background-color: #c0c0c0;
 }
 
 .resources-section {
-  /* background-color: #b0b0b0; */
+  background-color: #b0b0b0;
+}
+html {
+  scroll-behavior: smooth;
 }
