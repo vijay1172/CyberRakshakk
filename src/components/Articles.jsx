@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
+import {motion} from 'framer-motion';
+import { fadeIn } from './variants';
 import './Articles.css';
 import phishingimage from '../assets/phishing.jpeg';
 import strongpassword from '../assets/strong password.jpeg';
 import cyber from '../assets/cyber.jpeg';
 import twofactor from '../assets/twofactor1.jpg'
+
 
 
 const articles = [
@@ -58,15 +61,30 @@ function ArticlesSection() {
   }, [startIndex]);
   return (
     <section className="articles-section" id="articles">
-      <h2>Basic Terminology</h2>
+      <motion.h2
+      variants={fadeIn("up",0.1)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{once:false,amount:0.5}}
+      
+      
+      
+      >Basic Terminology</motion.h2>
       <div className="carousel">
         <button className="carousel-button-prev" onClick={prevSlide}>&lt;</button>
-        <div className="card-container">
+        <motion.div
+        variants={fadeIn("up",0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{once:false,amount:0.7}}
+        
+        className="card-container">
           {[0, 1, 2].map((offset) => {
             const index = (startIndex + offset) % articles.length;
             const isExpanded = expandedCard === index;
             return (
-              <div 
+              <div
+               
                 className={`card ${isExpanded ? 'expanded' : ''}`} 
                 key={index}
                 onClick={() => toggleCard(index)}
@@ -81,7 +99,7 @@ function ArticlesSection() {
               </div>
             );
           })}
-        </div>
+        </motion.div>
         <button className="carousel-button-next" onClick={nextSlide}>&gt;</button>
       </div>
     </section>

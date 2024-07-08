@@ -7,6 +7,8 @@ import ArticlesSection from './components/Articles';
 import Footer from './components/Footer';
 import Login from './components/Login'; // Make sure to create this component
 import './App.css';
+import Resources from './components/Resources';
+import HelpSection from './components/Help';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
               <HeroSection id="hero" />
               <QuizApp id="quiz" />
               <ArticlesSection id="articles" />
-              {/* Add other sections as needed */}
+              <Resources/>
+              <HelpSection/>
+              
             </main>
           } />
           <Route path="/login" element={<Login/>} />
