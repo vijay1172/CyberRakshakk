@@ -2,7 +2,8 @@ import React from 'react';
 import HeroSection from './HeroSection';
 import QuizApp from './Quiz';
 import ArticlesSection from './Articles';
-// Import other sections as needed
+import Resources from './Resources';
+import HelpSection from './Help';
 
 function MainPage() {
   return (
@@ -11,7 +12,8 @@ function MainPage() {
       <div id="quiz"><QuizApp /></div>
       <div id="articles"><ArticlesSection /></div>
       <div id="safety-tips">{/* Safety Tips Component */}</div>
-      <div id="resources">{/* Resources Component */}</div>
+      <div id="resources"><Resources/></div>
+      <div id="help"><HelpSection/></div>
     </main>
   );
 }
