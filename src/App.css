@@ -1,10 +1,9 @@
-
-
 *{
   margin: 0;
   padding: 0;
   
 }
+
 
 
 .articles-section {
@@ -14,6 +13,12 @@
 .safety-tips-section {
   background-color: #c0c0c0;
 }
+
+
+.resources-section {
+  background-color: #b0b0b0;
+}
+
 
 html {
   scroll-behavior: smooth;

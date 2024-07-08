@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <section className="hero-container">
       <div className="hero-content">
-        <h1 className='heading'>Welcome to CyberRakshak</h1>
+        <h3 className='heading'>Welcome to CyberRakshak</h3>
         <p>Learn, test your knowledge, and stay safe online</p>
       </div>
     </section>
