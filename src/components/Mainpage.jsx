@@ -10,9 +10,9 @@ function MainPage() {
       <div id="hero"><HeroSection /></div>
       <div id="quiz"><QuizApp /></div>
       <div id="articles"><ArticlesSection /></div>
-      {/* Add components for other sections */}
+      <div id="safety-tips">{/* Safety Tips Component */}</div>
+      <div id="resources">{/* Resources Component */}</div>
     </main>
   );
 }
-
 export default MainPage;
