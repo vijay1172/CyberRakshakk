@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faQuestionCircle, faNewspaper, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
   return (
@@ -12,15 +14,15 @@ function Footer() {
         <div className="footer-section links">
           <h2>Quick Links</h2>
           <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-            <li><a href="#articles">Articles</a></li>
+            <li><a href="#hero"><FontAwesomeIcon icon={faHome} />Home</a></li>
+            <li><a href="#quiz"><FontAwesomeIcon icon={faQuestionCircle} /> Quiz</a></li>
+            <li><a href="#articles"><FontAwesomeIcon icon={faNewspaper} /> Articles</a></li>
           </ul>
         </div>
         <div className="footer-section contact">
           <h2>Contact Us</h2>
-          <p>Email: support@example.com</p>
-          <p>Phone: (123) 456-7890</p>
+          <p><FontAwesomeIcon icon={faEnvelope} /> Email: support@example.com</p>
+          <p><FontAwesomeIcon icon={faPhone} /> Phone: (123) 456-7890</p>
         </div>
       </div>
       <div className="footer-bottom">
