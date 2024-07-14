@@ -34,15 +34,6 @@
   color: white;
   text-align: center;
 }
-
-/* .heading {
-  margin-top: 30px;
-  font-size: 6rem; /* Adjust the size if needed */
-  /* background: linear-gradient(90deg, #FF69B4, #1E90FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: text-appear 3s ease-in-out forwards, color-change 5s infinite;
-} */ 
 .heading {
   margin-top: 30px;
   font-size: 4rem; /* Adjusted the size */
