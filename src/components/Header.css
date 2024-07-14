@@ -7,10 +7,10 @@ header {
   justify-content: space-between;
   padding: 10px 20px;
   height: 6rem;
-  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(50px);
   z-index: 100;
 }
+
 
 .logo {
   font-size: 2rem;
@@ -21,7 +21,7 @@ header {
   height: 6rem; 
   width: auto;
   display: block;
-  border: 1px solid white;
+  border: 1px solid rgb(252, 252, 252);
   border-radius: 50%;
 }
 
@@ -36,16 +36,40 @@ nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.header-container li {
-  margin: 0 10px;
-}
 
 .login-btn {
   padding: 8px 16px;
   background-color: #007bff;
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.header-container li {
+  margin: 0 10px;
+}
+
+.header-container li a {
+  font-weight: 400;
+  font-size: 1.18rem;
+  color: #be6914;
+  text-decoration: none;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.header-container li a:hover {
+  color: #977737;
+  text-decoration: underline;
+  transform: scale(1.1);
 }

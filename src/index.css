@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -71,12 +71,25 @@ button:focus-visible {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+html {
+  scroll-behavior: smooth;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
