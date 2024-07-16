@@ -1,14 +1,22 @@
 
+body{
+   background-color: #01021A;
+}
+
 
   .wrapper{
    position: relative;
-   /* z-index: 102; */
+   z-index: 102;
     width: 500px;
-    height: 450px;
-    background: rgb(34, 48, 84);
+    height: 550px;
     border-radius: 10px;
-    margin-left: 90px;
+    margin-left: 450px;
     color: rgb(253, 249, 249);
+    margin-top: 50px;
+    padding: 2px 3px;
+    margin-bottom: 80px;
+
+    padding-bottom: 40px;
   }
   .wrapper .form-box{
     /* width: %; */
@@ -17,6 +25,7 @@
   form h1{
   font-size: 36px;
   text-align: center;
+  margin-right: 55px;
 
   }
   form .input-box{
@@ -87,7 +96,15 @@
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
   }
   .register-link p a :hover{
     text-decoration: underline;
+  }
+  form .register-link p span{
+    cursor: pointer;
+  }
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
   }
