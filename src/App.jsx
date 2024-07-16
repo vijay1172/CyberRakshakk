@@ -9,6 +9,7 @@ import Login from './components/Login'; // Make sure to create this component
 import './App.css';
 import Resources from './components/Resources';
 import HelpSection from './components/Help';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             </main>
           } />
           <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Signup />} />
           {/* Add other routes as needed */}
         </Routes>
         <Footer />

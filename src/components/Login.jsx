@@ -1,34 +1,67 @@
-import React from 'react'
-import './Login.css'
+import React, { useState } from 'react';
+import './Login.css';
 import { FaUser, FaLock } from "react-icons/fa";
-const Login = () => {
+import { useNavigate } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+const Login = ({ onSuccess }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const auth = getAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      // If successful, call onSuccess and redirect
+  
+      navigate('/');
+    } catch (error) {
+      setError('Failed to log in. Please check your credentials.');
+      console.error("Login error:", error);
+    }
+  };
+
   return (
-    <center>
-      <div className='wrapper'>
-        <div className='form-box login'>
-          <form action="">
-            <h1>Login</h1>
-            <div className="input-box">
-              <input type="text" placeholder='Username' required />
-              <FaUser className='icon' />
-            </div>
-            <div className="input-box">
-              <input type="password" placeholder='password' required />
-              <FaLock className='icon'/>
-            </div>
-            <div className="remember-forget">
-              <label> <input type="checkbox"/> Remember me</label>
-              <a href="#"> Forget Password? </a>
-            </div>
-            <button type='submit'>Login</button>
-            <div className="register-link">
-              <p>Don't have an account? <a href="#">Register Now</a> </p>
-            </div>
-          </form>
-        </div>
+    <div className='wrapper'>
+      <div className='form-box login'>
+        <form onSubmit={handleSubmit}>
+          <h1>Login</h1>
+          {error && <p className="error-message">{error}</p>}
+          <div className="input-box">
+            <input 
+              type="email" 
+              placeholder='Email' 
+              required 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <FaUser className='icon' />
+          </div>
+          <div className="input-box">
+            <input 
+              type="password" 
+              placeholder='Password' 
+              required 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <FaLock className='icon'/>
+          </div>
+          <button type='submit'>Login</button>
+          <div className="register-link">
+            <p>Don't have an account? <span onClick={() => navigate('/register')}>Register Now</span></p>
+          </div>
+        </form>
+        
+        
       </div>
-    </center>
-  )
+    </div>
+  );
 }
 
 export default Login;
