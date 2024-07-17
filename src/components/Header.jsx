@@ -24,6 +24,7 @@ function Header() {
           <li><Link to="/" onClick={(event) => scrollToSection('articles', event)}>Articles</Link></li>
           <li><Link to="/" onClick={(event) => scrollToSection('safety-tips', event)}>Safety Tips</Link></li>
           <li><Link to="/" onClick={(event) => scrollToSection('resources', event)}>Resources</Link></li>
+          <li><Link to="/" onClick={(event) => scrollToSection('Blog', event)}>Blog</Link></li>
         </ul>
         <Link className="login-btn" to="/login">Login</Link>
       </nav>
