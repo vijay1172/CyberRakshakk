@@ -3,7 +3,7 @@ import Quiz from 'react-quiz-component';
 import '../components/Quiz.css';
 import {motion} from 'framer-motion';
 import { fadeIn } from './variants';
-import quizMainImage from '/quizmain.jpg';
+import quizMainImage from '../assets/quizmain.jpg';
 
 function QuizSection() {
   const [quizData, setQuizData] = useState(null);
