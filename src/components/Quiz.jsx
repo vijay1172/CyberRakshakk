@@ -11,7 +11,6 @@ function QuizSection() {
   const [showQuiz, setShowQuiz] = useState(false);
 
   useEffect(() => {
-    console.log('Fetching questions...');
     fetch('/questions.json')
       .then(response => {
         if (!response.ok) {
@@ -20,7 +19,6 @@ function QuizSection() {
         return response.json();
       })
       .then(data => {
-        console.log('Questions loaded:', data);
         setQuizData(data);
       })
       .catch(error => {
