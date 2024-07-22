@@ -3,6 +3,7 @@ import Quiz from 'react-quiz-component';
 import '../components/Quiz.css';
 import {motion} from 'framer-motion';
 import { fadeIn } from './variants';
+import quizMainImage from '../assets/hero.jpg';
 
 function QuizSection() {
   const [quizData, setQuizData] = useState(null);
@@ -77,7 +78,7 @@ function QuizSection() {
         
         className='parent-container'>
          
-          <img className='quizimg' src="./src/assets/quizmain.png" alt="img" />
+          <img className='quizimg' src={quizMainImage} alt="img" />
         </motion.div>
       </>
       ) : (
