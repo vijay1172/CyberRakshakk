@@ -79,7 +79,7 @@ function QuizSection() {
         
         className='parent-container'>
          
-          <img className='quizimg' src="./src/assets/quizmain.jpg" alt="img" />
+          <img className='quizimg' src="./public/quizmain.jpg" alt="img" />
         </motion.div>
       </>
       ) : (
